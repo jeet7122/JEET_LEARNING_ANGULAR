@@ -1,0 +1,9 @@
+<div *ngIf="employee" class="employee-details">
+  <h2>Employee Details</h2>
+  <p><strong>ID:</strong> {{employee.id}}</p>
+  <p><strong>First Name:</strong> {{employee.firstName}}</p>
+  <p><strong>Last Name:</strong> {{employee.lastName}}</p>
+  <p><strong>Status:</strong> {{employee.status}}</p>
+  <p><strong>Manager:</strong> {{employee.isManager? 'Yes':'No'}}</p>
+  <button (toggle)="toggleManager(employee)">Change</button>
+</div>

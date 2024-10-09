@@ -1,4 +1,11 @@
-<div>
-  <h2>{{name}}</h2>
-  <p>{{message}}</p>
+<div class="container">
+  <div *ngIf="featuredEmployee" class="featured_employee">
+    <h2>Featured Employee</h2>
+    <p>First Name: {{featuredEmployee.firstName}}</p>
+    <p>Last Name: {{featuredEmployee.lastName}}</p>
+    <p>Status: {{featuredEmployee.status}}</p>
+    <p>Manager: {{featuredEmployee.isManager? 'Yes':'No'}}</p>
+  </div>
 </div>
+<h1>{{title}}</h1>
+<app-employee-list></app-employee-list>

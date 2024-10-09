@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngIf="featuredEmployee">
+    <h2>Featured Employee Details</h2>
+    <app-employee-details [employee]="featuredEmployee"></app-employee-details>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th *ngFor="let columns of displayedColumn">{{columns}}</th>
+   </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeList" (click)="selectEmployee(employee)">
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.status}}</td>
+        <td>{{employee.isManager? 'Yes':'No'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-employee-details [employee]="selectedEmployee"></app-employee-details>
+</div>
