@@ -1,2 +1,22 @@
+.container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
+.featured_employee{
+  width: 300px;
+  background-color: slategrey;
+  border-radius: 8px;
+  padding: 5px;
+}
+h2{
+  text-align: center;
+  color: darkslateblue;
+}
+p{
+  font-family: Arial sans-serif;
+}
+h1{
+  text-align: center;
+  color: #6590ed;
 }
